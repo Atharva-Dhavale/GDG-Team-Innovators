@@ -1,12 +1,10 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@radix-ui/react-tabs';
 import { 
   BookOpen, 
   FileText, 
   Trophy, 
-  Star, 
   Upload, 
   MessageSquare,
   CheckCircle,
@@ -208,9 +206,9 @@ export default function StudentDashboard() {
             
             {/* Daily Motivation */}
             <div className="mt-6 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg p-4 text-white">
-              <h3 className="font-medium mb-1">Today's Motivation</h3>
+              <h3 className="font-medium mb-1">Today&apos;s Motivation</h3>
               <p className="text-sm text-purple-100">
-                "Education is the passport to the future, for tomorrow belongs to those who prepare for it today."
+                &quot;Education is the passport to the future, for tomorrow belongs to those who prepare for it today.&quot;
               </p>
               <p className="text-xs mt-2 text-purple-200">- Malcolm X</p>
             </div>

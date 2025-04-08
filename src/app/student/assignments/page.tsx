@@ -5,7 +5,7 @@ import Layout from '@/components/Layout';
 import { mockAssignments, mockStudents, mockSubmissions } from '@/lib/mockData';
 import { Upload, CheckCircle, Loader2 } from 'lucide-react';
 import { gradeAssignment } from '@/utils/gradingLogic';
-import { generateFeedback, generateLearningRecommendations } from '@/utils/feedbackGenerator';
+import { generateFeedback } from '@/utils/feedbackGenerator';
 import { useToast } from '@/components/Toast';
 import FeedbackCard from '@/components/FeedbackCard';
 import { Assignment } from '@/types';

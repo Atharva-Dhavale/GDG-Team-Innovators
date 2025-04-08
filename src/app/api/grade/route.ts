@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { gradeAssignment } from '@/utils/gradingLogic';
 import { generateFeedback } from '@/utils/feedbackGenerator';
 import { mockAssignments } from '@/lib/mockData';
-import { Assignment } from '@/types';
 
 export async function POST(request: NextRequest) {
   try {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, ChangeEvent } from 'react';
-import { Upload, X, FileText, Check, Loader2 } from 'lucide-react';
+import { Upload, X, FileText, Loader2 } from 'lucide-react';
 import { useToast } from './Toast';
 
 interface AssignmentUploadProps {

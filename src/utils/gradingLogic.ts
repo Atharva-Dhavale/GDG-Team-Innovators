@@ -6,7 +6,7 @@
  * Grade an assignment based on text content
  * This is a mock function that returns a random score between 60-100
  */
-export function gradeAssignment(text: string): number {
+export function gradeAssignment(_text: string): number {
   // In a real system, this would connect to an AI service
   // For demo purposes, we'll use a simple algorithm based on text length and complexity
   
@@ -14,8 +14,8 @@ export function gradeAssignment(text: string): number {
   let score = 60 + Math.floor(Math.random() * 21);
   
   // Add points for longer submissions (indicating more detail)
-  if (text.length > 200) score += 5;
-  if (text.length > 500) score += 5;
+  if (_text.length > 200) score += 5;
+  if (_text.length > 500) score += 5;
   
   // Add points for using subject-specific keywords
   const keywords = [
@@ -27,7 +27,7 @@ export function gradeAssignment(text: string): number {
   
   let keywordCount = 0;
   keywords.forEach(keyword => {
-    if (text.toLowerCase().includes(keyword)) {
+    if (_text.toLowerCase().includes(keyword)) {
       keywordCount++;
     }
   });

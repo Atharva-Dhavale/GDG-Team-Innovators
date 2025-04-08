@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@radix-ui/react-tabs';
-import { BookOpen, Brain, LineChart as LineChartIcon, BarChart2, Compass, ArrowUpRight } from 'lucide-react';
+import { BookOpen, Brain, BarChart2, Compass, ArrowUpRight } from 'lucide-react';
 import { getLetterGrade } from '@/utils/gradingLogic';
 import { mockSubmissions, mockAssignments } from '@/lib/mockData';
 
@@ -47,7 +47,6 @@ export default function PersonalizedAnalytics({ studentId, studentName }: Person
   const colors = ['#8884d8', '#82ca9d', '#ffc658', '#ff8042'];
   
   subjects.forEach((subject, index) => {
-    const subjectAssignments = mockAssignments.filter(a => a.subject === subject);
     const subjectSubmissions = studentSubmissions.filter(sub => {
       const assignment = mockAssignments.find(a => a.id === sub.assignmentId);
       return assignment?.subject === subject;
@@ -155,7 +154,7 @@ export default function PersonalizedAnalytics({ studentId, studentName }: Person
           </div>
           <p className="mt-2 text-emerald-100">Score: {recommendations.strengths?.score || 0}/100</p>
           <div className="mt-4 pt-4 border-t border-emerald-300 border-opacity-30">
-            <p className="text-sm">You're excelling in this area!</p>
+            <p className="text-sm">You&apos;re excelling in this area!</p>
           </div>
         </div>
         
@@ -166,7 +165,7 @@ export default function PersonalizedAnalytics({ studentId, studentName }: Person
           </div>
           <p className="mt-2 text-amber-100">Score: {recommendations.improvementArea?.score || 0}/100</p>
           <div className="mt-4 pt-4 border-t border-amber-300 border-opacity-30">
-            <p className="text-sm">With a little more focus, you'll improve!</p>
+            <p className="text-sm">With a little more focus, you&apos;ll improve!</p>
           </div>
         </div>
       </div>
@@ -244,7 +243,7 @@ export default function PersonalizedAnalytics({ studentId, studentName }: Person
               </li>
               <li className="flex items-start">
                 <ArrowUpRight className="h-5 w-5 text-indigo-500 mr-2 mt-0.5" />
-                <span className="text-indigo-800">You're performing above average in {subjectPerformance.filter(s => s.score > 70).length} subjects.</span>
+                <span className="text-indigo-800">You&apos;re performing above average in {subjectPerformance.filter(s => s.score > 70).length} subjects.</span>
               </li>
               <li className="flex items-start">
                 <ArrowUpRight className="h-5 w-5 text-indigo-500 mr-2 mt-0.5" />

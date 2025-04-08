@@ -4,11 +4,7 @@ import { useState } from 'react';
 import { 
   BarChart3, 
   Users, 
-  FileText, 
-  BookOpen,
-  User,
-  Calendar,
-  ArrowUpRight
+  FileText
 } from 'lucide-react';
 import Link from 'next/link';
 import { 
@@ -21,8 +17,7 @@ import {
   ResponsiveContainer,
   LineChart,
   Line,
-  Legend,
-  Cell
+  Legend
 } from 'recharts';
 import { useToast } from '@/components/Toast';
 import { 
@@ -43,7 +38,6 @@ export default function TeacherDashboard() {
   // Calculate overall class metrics
   const allScores = mockSubmissions.filter(sub => sub.score).map(sub => sub.score as number);
   const averageScore = allScores.reduce((sum, score) => sum + score, 0) / allScores.length;
-  const lowestScore = Math.min(...allScores);
   const highestScore = Math.max(...allScores);
 
   // Get student details if selected
